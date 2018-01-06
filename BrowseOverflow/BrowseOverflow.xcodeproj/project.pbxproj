@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A3F59171FFB3AEE0029CDBA /* StackOverflowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F59161FFB3AEE0029CDBA /* StackOverflowManager.m */; };
+		0A3F59191FFB3B1C0029CDBA /* QuestionCreationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F59181FFB3B1C0029CDBA /* QuestionCreationTests.m */; };
+		0A3F591C1FFB713C0029CDBA /* StackOverflowCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3F591B1FFB713C0029CDBA /* StackOverflowCommunicator.m */; };
+		0A6C348C1FBD84B200217963 /* TopicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C348B1FBD84B200217963 /* TopicTests.m */; };
+		0A6C348F1FBD859A00217963 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C348E1FBD859A00217963 /* Topic.m */; };
+		0AA892BF1FC2F263001D7217 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892BE1FC2F263001D7217 /* Question.m */; };
+		0AA892C01FC2F263001D7217 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892BE1FC2F263001D7217 /* Question.m */; };
+		0AA892C11FC2F263001D7217 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892BE1FC2F263001D7217 /* Question.m */; };
+		0AA892C21FC2F2A1001D7217 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C348E1FBD859A00217963 /* Topic.m */; };
+		0AA892C31FC2F2A3001D7217 /* Topic.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A6C348E1FBD859A00217963 /* Topic.m */; };
+		0AA892C51FC2F311001D7217 /* QuestionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892C41FC2F311001D7217 /* QuestionTests.m */; };
+		0AA892C81FC2FD9E001D7217 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892C71FC2FD9E001D7217 /* Person.m */; };
+		0AA892C91FC2FD9E001D7217 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892C71FC2FD9E001D7217 /* Person.m */; };
+		0AA892CA1FC2FD9E001D7217 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892C71FC2FD9E001D7217 /* Person.m */; };
+		0AA892CC1FC2FDBC001D7217 /* PersonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892CB1FC2FDBC001D7217 /* PersonTests.m */; };
+		0AA892CF1FC44DF2001D7217 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892CE1FC44DF2001D7217 /* Answer.m */; };
+		0AA892D01FC44DF2001D7217 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892CE1FC44DF2001D7217 /* Answer.m */; };
+		0AA892D11FC44DF2001D7217 /* Answer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892CE1FC44DF2001D7217 /* Answer.m */; };
+		0AA892D31FC44E05001D7217 /* AnswerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA892D21FC44E05001D7217 /* AnswerTests.m */; };
+		0AEB1FBA1FB2E1BF00B9E164 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1FB91FB2E1BF00B9E164 /* AppDelegate.m */; };
+		0AEB1FBD1FB2E1BF00B9E164 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1FBC1FB2E1BF00B9E164 /* ViewController.m */; };
+		0AEB1FC01FB2E1BF00B9E164 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB1FBE1FB2E1BF00B9E164 /* Main.storyboard */; };
+		0AEB1FC21FB2E1BF00B9E164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB1FC11FB2E1BF00B9E164 /* Assets.xcassets */; };
+		0AEB1FC51FB2E1BF00B9E164 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AEB1FC31FB2E1BF00B9E164 /* LaunchScreen.storyboard */; };
+		0AEB1FC81FB2E1BF00B9E164 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1FC71FB2E1BF00B9E164 /* main.m */; };
+		0AEB1FD21FB2E1BF00B9E164 /* BrowseOverflowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1FD11FB2E1BF00B9E164 /* BrowseOverflowTests.m */; };
+		0AEB1FDD1FB2E1BF00B9E164 /* BrowseOverflowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AEB1FDC1FB2E1BF00B9E164 /* BrowseOverflowUITests.m */; };
+		8E5D24769065038B2F787FF5 /* libPods-BrowseOverflowUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABF880A3EF3683D68C219435 /* libPods-BrowseOverflowUITests.a */; };
+		AFF5DA889647B3391869EB35 /* libPods-BrowseOverflowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AF983458AF9E922006D597 /* libPods-BrowseOverflowTests.a */; };
+		F400074544C44A7E788870EA /* libPods-BrowseOverflow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B2B062DE9251F7BEFDC784 /* libPods-BrowseOverflow.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0AEB1FCE1FB2E1BF00B9E164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AEB1FAD1FB2E1BF00B9E164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AEB1FB41FB2E1BF00B9E164;
+			remoteInfo = BrowseOverflow;
+		};
+		0AEB1FD91FB2E1BF00B9E164 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AEB1FAD1FB2E1BF00B9E164 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AEB1FB41FB2E1BF00B9E164;
+			remoteInfo = BrowseOverflow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A2466932000BB9E00955C0D /* libJSONModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libJSONModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2466952000BBE100955C0D /* libJSONModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libJSONModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A3F59151FFB3AEE0029CDBA /* StackOverflowManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackOverflowManager.h; sourceTree = "<group>"; };
+		0A3F59161FFB3AEE0029CDBA /* StackOverflowManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOverflowManager.m; sourceTree = "<group>"; };
+		0A3F59181FFB3B1C0029CDBA /* QuestionCreationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionCreationTests.m; sourceTree = "<group>"; };
+		0A3F591A1FFB713C0029CDBA /* StackOverflowCommunicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackOverflowCommunicator.h; sourceTree = "<group>"; };
+		0A3F591B1FFB713C0029CDBA /* StackOverflowCommunicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StackOverflowCommunicator.m; sourceTree = "<group>"; };
+		0A6C348B1FBD84B200217963 /* TopicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicTests.m; sourceTree = "<group>"; };
+		0A6C348D1FBD859A00217963 /* Topic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Topic.h; sourceTree = "<group>"; };
+		0A6C348E1FBD859A00217963 /* Topic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Topic.m; sourceTree = "<group>"; };
+		0AA892BD1FC2F263001D7217 /* Question.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		0AA892BE1FC2F263001D7217 /* Question.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		0AA892C41FC2F311001D7217 /* QuestionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionTests.m; sourceTree = "<group>"; };
+		0AA892C61FC2FD9E001D7217 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		0AA892C71FC2FD9E001D7217 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		0AA892CB1FC2FDBC001D7217 /* PersonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonTests.m; sourceTree = "<group>"; };
+		0AA892CD1FC44DF2001D7217 /* Answer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Answer.h; sourceTree = "<group>"; };
+		0AA892CE1FC44DF2001D7217 /* Answer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Answer.m; sourceTree = "<group>"; };
+		0AA892D21FC44E05001D7217 /* AnswerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnswerTests.m; sourceTree = "<group>"; };
+		0AEB1FB51FB2E1BF00B9E164 /* BrowseOverflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowseOverflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AEB1FB81FB2E1BF00B9E164 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0AEB1FB91FB2E1BF00B9E164 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0AEB1FBB1FB2E1BF00B9E164 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0AEB1FBC1FB2E1BF00B9E164 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0AEB1FBF1FB2E1BF00B9E164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0AEB1FC11FB2E1BF00B9E164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AEB1FC41FB2E1BF00B9E164 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0AEB1FC61FB2E1BF00B9E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AEB1FC71FB2E1BF00B9E164 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0AEB1FCD1FB2E1BF00B9E164 /* BrowseOverflowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowseOverflowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AEB1FD11FB2E1BF00B9E164 /* BrowseOverflowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseOverflowTests.m; sourceTree = "<group>"; };
+		0AEB1FD31FB2E1BF00B9E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AEB1FD81FB2E1BF00B9E164 /* BrowseOverflowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowseOverflowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0AEB1FDC1FB2E1BF00B9E164 /* BrowseOverflowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrowseOverflowUITests.m; sourceTree = "<group>"; };
+		0AEB1FDE1FB2E1BF00B9E164 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		693961E654B0E4BBF651F9A8 /* Pods-BrowseOverflowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrowseOverflowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrowseOverflowUITests/Pods-BrowseOverflowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B6BE4DAF73573D59269DBF4 /* Pods-BrowseOverflow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrowseOverflow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrowseOverflow/Pods-BrowseOverflow.debug.xcconfig"; sourceTree = "<group>"; };
+		76258D3E78BE83F8FFE71B89 /* Pods-BrowseOverflowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrowseOverflowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrowseOverflowUITests/Pods-BrowseOverflowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		76BDC77B7D887A5A920E51D3 /* Pods-BrowseOverflowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrowseOverflowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrowseOverflowTests/Pods-BrowseOverflowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88E6DEEE28AD640C17F88D92 /* Pods-BrowseOverflowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrowseOverflowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrowseOverflowTests/Pods-BrowseOverflowTests.release.xcconfig"; sourceTree = "<group>"; };
+		89AF983458AF9E922006D597 /* libPods-BrowseOverflowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrowseOverflowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABF880A3EF3683D68C219435 /* libPods-BrowseOverflowUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrowseOverflowUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B2B062DE9251F7BEFDC784 /* libPods-BrowseOverflow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrowseOverflow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D3DBCCD13BC38B36CA9B45 /* Pods-BrowseOverflow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrowseOverflow.release.xcconfig"; path = "Pods/Target Support Files/Pods-BrowseOverflow/Pods-BrowseOverflow.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AEB1FB21FB2E1BF00B9E164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F400074544C44A7E788870EA /* libPods-BrowseOverflow.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AEB1FCA1FB2E1BF00B9E164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFF5DA889647B3391869EB35 /* libPods-BrowseOverflowTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AEB1FD51FB2E1BF00B9E164 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E5D24769065038B2F787FF5 /* libPods-BrowseOverflowUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AEB1FAC1FB2E1BF00B9E164 = {
+			isa = PBXGroup;
+			children = (
+				0AEB1FB71FB2E1BF00B9E164 /* BrowseOverflow */,
+				0AEB1FD01FB2E1BF00B9E164 /* BrowseOverflowTests */,
+				0AEB1FDB1FB2E1BF00B9E164 /* BrowseOverflowUITests */,
+				0AEB1FB61FB2E1BF00B9E164 /* Products */,
+				35F065E4224B78A4AE152E52 /* Pods */,
+				21061BB9C66F2753167E3449 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0AEB1FB61FB2E1BF00B9E164 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0AEB1FB51FB2E1BF00B9E164 /* BrowseOverflow.app */,
+				0AEB1FCD1FB2E1BF00B9E164 /* BrowseOverflowTests.xctest */,
+				0AEB1FD81FB2E1BF00B9E164 /* BrowseOverflowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0AEB1FB71FB2E1BF00B9E164 /* BrowseOverflow */ = {
+			isa = PBXGroup;
+			children = (
+				0AEB1FB81FB2E1BF00B9E164 /* AppDelegate.h */,
+				0AEB1FB91FB2E1BF00B9E164 /* AppDelegate.m */,
+				0AEB1FBB1FB2E1BF00B9E164 /* ViewController.h */,
+				0AEB1FBC1FB2E1BF00B9E164 /* ViewController.m */,
+				0AEB1FBE1FB2E1BF00B9E164 /* Main.storyboard */,
+				0AEB1FC11FB2E1BF00B9E164 /* Assets.xcassets */,
+				0AEB1FC31FB2E1BF00B9E164 /* LaunchScreen.storyboard */,
+				0AEB1FC61FB2E1BF00B9E164 /* Info.plist */,
+				0AEB1FC71FB2E1BF00B9E164 /* main.m */,
+				0A6C348D1FBD859A00217963 /* Topic.h */,
+				0A6C348E1FBD859A00217963 /* Topic.m */,
+				0AA892C61FC2FD9E001D7217 /* Person.h */,
+				0AA892C71FC2FD9E001D7217 /* Person.m */,
+				0AA892BD1FC2F263001D7217 /* Question.h */,
+				0AA892BE1FC2F263001D7217 /* Question.m */,
+				0AA892CD1FC44DF2001D7217 /* Answer.h */,
+				0AA892CE1FC44DF2001D7217 /* Answer.m */,
+				0A3F59151FFB3AEE0029CDBA /* StackOverflowManager.h */,
+				0A3F59161FFB3AEE0029CDBA /* StackOverflowManager.m */,
+				0A3F591A1FFB713C0029CDBA /* StackOverflowCommunicator.h */,
+				0A3F591B1FFB713C0029CDBA /* StackOverflowCommunicator.m */,
+			);
+			path = BrowseOverflow;
+			sourceTree = "<group>";
+		};
+		0AEB1FD01FB2E1BF00B9E164 /* BrowseOverflowTests */ = {
+			isa = PBXGroup;
+			children = (
+				0AEB1FD11FB2E1BF00B9E164 /* BrowseOverflowTests.m */,
+				0AA892C41FC2F311001D7217 /* QuestionTests.m */,
+				0AA892CB1FC2FDBC001D7217 /* PersonTests.m */,
+				0AEB1FD31FB2E1BF00B9E164 /* Info.plist */,
+				0A6C348B1FBD84B200217963 /* TopicTests.m */,
+				0AA892D21FC44E05001D7217 /* AnswerTests.m */,
+				0A3F59181FFB3B1C0029CDBA /* QuestionCreationTests.m */,
+			);
+			path = BrowseOverflowTests;
+			sourceTree = "<group>";
+		};
+		0AEB1FDB1FB2E1BF00B9E164 /* BrowseOverflowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0AEB1FDC1FB2E1BF00B9E164 /* BrowseOverflowUITests.m */,
+				0AEB1FDE1FB2E1BF00B9E164 /* Info.plist */,
+			);
+			path = BrowseOverflowUITests;
+			sourceTree = "<group>";
+		};
+		21061BB9C66F2753167E3449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A2466952000BBE100955C0D /* libJSONModel.a */,
+				0A2466932000BB9E00955C0D /* libJSONModel.a */,
+				C2B2B062DE9251F7BEFDC784 /* libPods-BrowseOverflow.a */,
+				89AF983458AF9E922006D597 /* libPods-BrowseOverflowTests.a */,
+				ABF880A3EF3683D68C219435 /* libPods-BrowseOverflowUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		35F065E4224B78A4AE152E52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B6BE4DAF73573D59269DBF4 /* Pods-BrowseOverflow.debug.xcconfig */,
+				F2D3DBCCD13BC38B36CA9B45 /* Pods-BrowseOverflow.release.xcconfig */,
+				76BDC77B7D887A5A920E51D3 /* Pods-BrowseOverflowTests.debug.xcconfig */,
+				88E6DEEE28AD640C17F88D92 /* Pods-BrowseOverflowTests.release.xcconfig */,
+				693961E654B0E4BBF651F9A8 /* Pods-BrowseOverflowUITests.debug.xcconfig */,
+				76258D3E78BE83F8FFE71B89 /* Pods-BrowseOverflowUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0AEB1FB41FB2E1BF00B9E164 /* BrowseOverflow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AEB1FE11FB2E1BF00B9E164 /* Build configuration list for PBXNativeTarget "BrowseOverflow" */;
+			buildPhases = (
+				ED0EB8A269C483337336DB7F /* [CP] Check Pods Manifest.lock */,
+				0AEB1FB11FB2E1BF00B9E164 /* Sources */,
+				0AEB1FB21FB2E1BF00B9E164 /* Frameworks */,
+				0AEB1FB31FB2E1BF00B9E164 /* Resources */,
+				60663CF96FCAF738255D1398 /* [CP] Embed Pods Frameworks */,
+				905B17C6FA3D900A0CB52217 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BrowseOverflow;
+			productName = BrowseOverflow;
+			productReference = 0AEB1FB51FB2E1BF00B9E164 /* BrowseOverflow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0AEB1FCC1FB2E1BF00B9E164 /* BrowseOverflowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AEB1FE41FB2E1BF00B9E164 /* Build configuration list for PBXNativeTarget "BrowseOverflowTests" */;
+			buildPhases = (
+				DDB017162D196F9430359DD2 /* [CP] Check Pods Manifest.lock */,
+				0AEB1FC91FB2E1BF00B9E164 /* Sources */,
+				0AEB1FCA1FB2E1BF00B9E164 /* Frameworks */,
+				0AEB1FCB1FB2E1BF00B9E164 /* Resources */,
+				C6768416962B8CCD3FFEFA40 /* [CP] Embed Pods Frameworks */,
+				EF2AB01A4FAD68DC3E95336E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AEB1FCF1FB2E1BF00B9E164 /* PBXTargetDependency */,
+			);
+			name = BrowseOverflowTests;
+			productName = BrowseOverflowTests;
+			productReference = 0AEB1FCD1FB2E1BF00B9E164 /* BrowseOverflowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0AEB1FD71FB2E1BF00B9E164 /* BrowseOverflowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AEB1FE71FB2E1BF00B9E164 /* Build configuration list for PBXNativeTarget "BrowseOverflowUITests" */;
+			buildPhases = (
+				D7F16103AC066F4073434454 /* [CP] Check Pods Manifest.lock */,
+				0AEB1FD41FB2E1BF00B9E164 /* Sources */,
+				0AEB1FD51FB2E1BF00B9E164 /* Frameworks */,
+				0AEB1FD61FB2E1BF00B9E164 /* Resources */,
+				C3D0111A6259A6A5711154FF /* [CP] Embed Pods Frameworks */,
+				E52370F3D79E4AB02F3949CC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AEB1FDA1FB2E1BF00B9E164 /* PBXTargetDependency */,
+			);
+			name = BrowseOverflowUITests;
+			productName = BrowseOverflowUITests;
+			productReference = 0AEB1FD81FB2E1BF00B9E164 /* BrowseOverflowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0AEB1FAD1FB2E1BF00B9E164 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Tester;
+				TargetAttributes = {
+					0AEB1FB41FB2E1BF00B9E164 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					0AEB1FCC1FB2E1BF00B9E164 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0AEB1FB41FB2E1BF00B9E164;
+					};
+					0AEB1FD71FB2E1BF00B9E164 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0AEB1FB41FB2E1BF00B9E164;
+					};
+				};
+			};
+			buildConfigurationList = 0AEB1FB01FB2E1BF00B9E164 /* Build configuration list for PBXProject "BrowseOverflow" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0AEB1FAC1FB2E1BF00B9E164;
+			productRefGroup = 0AEB1FB61FB2E1BF00B9E164 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0AEB1FB41FB2E1BF00B9E164 /* BrowseOverflow */,
+				0AEB1FCC1FB2E1BF00B9E164 /* BrowseOverflowTests */,
+				0AEB1FD71FB2E1BF00B9E164 /* BrowseOverflowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0AEB1FB31FB2E1BF00B9E164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AEB1FC51FB2E1BF00B9E164 /* LaunchScreen.storyboard in Resources */,
+				0AEB1FC21FB2E1BF00B9E164 /* Assets.xcassets in Resources */,
+				0AEB1FC01FB2E1BF00B9E164 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AEB1FCB1FB2E1BF00B9E164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AEB1FD61FB2E1BF00B9E164 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60663CF96FCAF738255D1398 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrowseOverflow/Pods-BrowseOverflow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		905B17C6FA3D900A0CB52217 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrowseOverflow/Pods-BrowseOverflow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3D0111A6259A6A5711154FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrowseOverflowUITests/Pods-BrowseOverflowUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6768416962B8CCD3FFEFA40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrowseOverflowTests/Pods-BrowseOverflowTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7F16103AC066F4073434454 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrowseOverflowUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDB017162D196F9430359DD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrowseOverflowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E52370F3D79E4AB02F3949CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrowseOverflowUITests/Pods-BrowseOverflowUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED0EB8A269C483337336DB7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrowseOverflow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF2AB01A4FAD68DC3E95336E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BrowseOverflowTests/Pods-BrowseOverflowTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0AEB1FB11FB2E1BF00B9E164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA892C81FC2FD9E001D7217 /* Person.m in Sources */,
+				0AA892CF1FC44DF2001D7217 /* Answer.m in Sources */,
+				0AEB1FBD1FB2E1BF00B9E164 /* ViewController.m in Sources */,
+				0A6C348F1FBD859A00217963 /* Topic.m in Sources */,
+				0AA892BF1FC2F263001D7217 /* Question.m in Sources */,
+				0AEB1FC81FB2E1BF00B9E164 /* main.m in Sources */,
+				0A3F591C1FFB713C0029CDBA /* StackOverflowCommunicator.m in Sources */,
+				0A3F59171FFB3AEE0029CDBA /* StackOverflowManager.m in Sources */,
+				0AEB1FBA1FB2E1BF00B9E164 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AEB1FC91FB2E1BF00B9E164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A3F59191FFB3B1C0029CDBA /* QuestionCreationTests.m in Sources */,
+				0AA892C91FC2FD9E001D7217 /* Person.m in Sources */,
+				0AA892D31FC44E05001D7217 /* AnswerTests.m in Sources */,
+				0AA892CC1FC2FDBC001D7217 /* PersonTests.m in Sources */,
+				0AA892C01FC2F263001D7217 /* Question.m in Sources */,
+				0AA892D01FC44DF2001D7217 /* Answer.m in Sources */,
+				0AA892C51FC2F311001D7217 /* QuestionTests.m in Sources */,
+				0AA892C21FC2F2A1001D7217 /* Topic.m in Sources */,
+				0AEB1FD21FB2E1BF00B9E164 /* BrowseOverflowTests.m in Sources */,
+				0A6C348C1FBD84B200217963 /* TopicTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0AEB1FD41FB2E1BF00B9E164 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AA892C31FC2F2A3001D7217 /* Topic.m in Sources */,
+				0AEB1FDD1FB2E1BF00B9E164 /* BrowseOverflowUITests.m in Sources */,
+				0AA892CA1FC2FD9E001D7217 /* Person.m in Sources */,
+				0AA892C11FC2F263001D7217 /* Question.m in Sources */,
+				0AA892D11FC44DF2001D7217 /* Answer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AEB1FCF1FB2E1BF00B9E164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AEB1FB41FB2E1BF00B9E164 /* BrowseOverflow */;
+			targetProxy = 0AEB1FCE1FB2E1BF00B9E164 /* PBXContainerItemProxy */;
+		};
+		0AEB1FDA1FB2E1BF00B9E164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AEB1FB41FB2E1BF00B9E164 /* BrowseOverflow */;
+			targetProxy = 0AEB1FD91FB2E1BF00B9E164 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0AEB1FBE1FB2E1BF00B9E164 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AEB1FBF1FB2E1BF00B9E164 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0AEB1FC31FB2E1BF00B9E164 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0AEB1FC41FB2E1BF00B9E164 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0AEB1FDF1FB2E1BF00B9E164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
+			};
+			name = Debug;
+		};
+		0AEB1FE01FB2E1BF00B9E164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
+			};
+			name = Release;
+		};
+		0AEB1FE21FB2E1BF00B9E164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B6BE4DAF73573D59269DBF4 /* Pods-BrowseOverflow.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4H2FBG38UR;
+				INFOPLIST_FILE = BrowseOverflow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BrowseOverflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0AEB1FE31FB2E1BF00B9E164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2D3DBCCD13BC38B36CA9B45 /* Pods-BrowseOverflow.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4H2FBG38UR;
+				INFOPLIST_FILE = BrowseOverflow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.BrowseOverflow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0AEB1FE51FB2E1BF00B9E164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BDC77B7D887A5A920E51D3 /* Pods-BrowseOverflowTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4H2FBG38UR;
+				INFOPLIST_FILE = BrowseOverflowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Tester.BrowseOverflow.BrowseOverflowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrowseOverflow.app/BrowseOverflow";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		0AEB1FE61FB2E1BF00B9E164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E6DEEE28AD640C17F88D92 /* Pods-BrowseOverflowTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4H2FBG38UR;
+				INFOPLIST_FILE = BrowseOverflowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Tester.BrowseOverflow.BrowseOverflowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BrowseOverflow.app/BrowseOverflow";
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		0AEB1FE81FB2E1BF00B9E164 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 693961E654B0E4BBF651F9A8 /* Pods-BrowseOverflowUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrowseOverflowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Tester.BrowseOverflow.BrowseOverflowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrowseOverflow;
+			};
+			name = Debug;
+		};
+		0AEB1FE91FB2E1BF00B9E164 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76258D3E78BE83F8FFE71B89 /* Pods-BrowseOverflowUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BrowseOverflowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.Tester.BrowseOverflow.BrowseOverflowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BrowseOverflow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AEB1FB01FB2E1BF00B9E164 /* Build configuration list for PBXProject "BrowseOverflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AEB1FDF1FB2E1BF00B9E164 /* Debug */,
+				0AEB1FE01FB2E1BF00B9E164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AEB1FE11FB2E1BF00B9E164 /* Build configuration list for PBXNativeTarget "BrowseOverflow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AEB1FE21FB2E1BF00B9E164 /* Debug */,
+				0AEB1FE31FB2E1BF00B9E164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AEB1FE41FB2E1BF00B9E164 /* Build configuration list for PBXNativeTarget "BrowseOverflowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AEB1FE51FB2E1BF00B9E164 /* Debug */,
+				0AEB1FE61FB2E1BF00B9E164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0AEB1FE71FB2E1BF00B9E164 /* Build configuration list for PBXNativeTarget "BrowseOverflowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AEB1FE81FB2E1BF00B9E164 /* Debug */,
+				0AEB1FE91FB2E1BF00B9E164 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0AEB1FAD1FB2E1BF00B9E164 /* Project object */;
+}
