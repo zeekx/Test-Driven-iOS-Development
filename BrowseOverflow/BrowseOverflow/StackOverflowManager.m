@@ -14,7 +14,7 @@ NSString *const StackOverflowManagerError = @"StackOverflowManagerError";
 @implementation StackOverflowManager
 - (void)setDelegate:(id<StackOverflowManagerDelegate>)delegate {
     if (delegate && ![delegate conformsToProtocol:@protocol(StackOverflowManagerDelegate)]) {
-        [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Delegate  object doesn't conform to the delegate protocol" userInfo: nil] raise];
+        [[NSException exceptionWithName:NSInvalidArgumentException reason:@"Delegate object doesn't conform to the delegate protocol" userInfo: nil] raise];
     }
     _delegate = delegate;
 }
@@ -23,20 +23,19 @@ NSString *const StackOverflowManagerError = @"StackOverflowManagerError";
     [self.communicator searchForQuestionsWithTag:topic.tag];
 }
 
-- (void)searchingForQuestionsFailedWithError:(NSError *)error {
-    NSDictionary *errorInfo = @{NSUnderlyingErrorKey:error};
-    NSError *reportError = [NSError errorWithDomain:StackOverflowManagerError code:StackOverflowManagerErrorQuestionsSearchCode userInfo:errorInfo];
-    if ([self.delegate respondsToSelector:@selector(fetchingQuestionsFailedWithError:)]) {
-        [self.delegate fetchingQuestionsFailedWithError:reportError];
-    } else {
-        assert(false);
-    }
+- (void)searchingForQuestionsFailedWithError:(nonnull NSError  *)error {
+    [self tellDelegateAboutQuestionSearchError:error];
 }
 
-- (void)tellDelegateAboutQuestionSearchError:(NSError *)error {
-    self.questionBuilder.errroToSet = error;
+- (void)tellDelegateAboutQuestionSearchError:(nonnull NSError *)error {
+    NSDictionary *userInfo = nil;
+    if (error) {
+        userInfo = @{NSUnderlyingErrorKey: error};
+    }
+    NSError *reportError = [NSError errorWithDomain:StackOverflowManagerError code:StackOverflowManagerErrorQuestionsSearchCode userInfo:userInfo];
+
     if ([self.delegate respondsToSelector:@selector(fetchingQuestionsFailedWithError:)]) {
-        [self.delegate fetchingQuestionsFailedWithError:error];
+        [self.delegate fetchingQuestionsFailedWithError:reportError];
     } else {
         assert(false);
     }

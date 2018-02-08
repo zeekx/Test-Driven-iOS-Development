@@ -16,6 +16,7 @@
 @implementation FakeQuestionBuilder
 -(NSArray<Question *> *)questionsFromJSON:(NSString *)JSONNotation error:(NSError * *)error {
     self.JSON = JSONNotation;
+    *error = self.errroToSet;
     return self.arrayToReturn;
 }
 @end
@@ -54,7 +55,7 @@
 
 
 
-@interface QuestionCreationTests : XCTestCase
+@interface QuestionCreationWorkflowTests : XCTestCase
 @property (strong, nonatomic) StackOverflowManager *manager;
 @property (strong, nonatomic) MockStackOverflowManagerDelegate *delegate;
 @property (strong, nonatomic) NSError *underlyingError;
@@ -63,7 +64,7 @@
 @end
 
 
-@implementation QuestionCreationTests
+@implementation QuestionCreationWorkflowTests
 
 - (void)setUp {
     [super setUp];
@@ -131,7 +132,7 @@
 
 - (void)testDelegateNotifiedOfErrorWhenQuestionBuilderFails {
     [self tellDelegateAboutQuestionSearchError:self.underlyingError];
-    XCTAssertNotNil([[self.delegate fetchError] userInfo],
+    XCTAssertNotNil([[[self.delegate fetchError] userInfo] objectForKey:NSUnderlyingErrorKey],
                     @"The delegate should have found out about the error");
     self.manager.questionBuilder = nil;
 }
