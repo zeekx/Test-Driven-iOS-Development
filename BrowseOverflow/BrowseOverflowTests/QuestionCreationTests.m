@@ -9,15 +9,40 @@
 #import <XCTest/XCTest.h>
 #import "StackOverflowManager.h"
 #import "Topic.h"
+#import "QuestionBuilder.h"
+
+@interface FakeQuestionBuilder: QuestionBuilder
+@end
+@implementation FakeQuestionBuilder
+-(NSArray<Question *> *)questionsFromJSON:(NSString *)JSONNotation error:(NSError * *)error {
+    self.JSON = JSONNotation;
+    return self.arrayToReturn;
+}
+@end
 
 @interface MockStackOverflowManagerDelegate : NSObject <StackOverflowManagerDelegate>
+@property (strong, nonatomic) NSError *fetchError;
+@property (strong, nonatomic) NSArray<Question *> *receivedQuestions;
+- (void)fetchingQuestionsFailedWithError:(NSError *)error;
+- (void)didReceivedQuestions:(NSArray<Question *> *)questions;
 @end
+
 @implementation MockStackOverflowManagerDelegate
+
+- (void)didReceivedQuestions:(NSArray<Question *> *)questions {
+    self.receivedQuestions = questions;
+}
+
+- (void)fetchingQuestionsFailedWithError:(NSError *)error {
+    self.fetchError = error;
+}
+
 @end
 
 @interface MockStackOverflowCommunicator : StackOverflowCommunicator
 @property (nonatomic, readonly) BOOL wasAskedToFetchQuestions;
 @end
+
 @interface MockStackOverflowCommunicator ()
 @property (nonatomic, readwrite) BOOL wasAskedToFetchQuestions;
 @end
@@ -25,13 +50,16 @@
 - (void)searchForQuestionsWithTag:(NSString *)tag {
     self.wasAskedToFetchQuestions = true;
 }
-
 @end
 
 
 
 @interface QuestionCreationTests : XCTestCase
 @property (strong, nonatomic) StackOverflowManager *manager;
+@property (strong, nonatomic) MockStackOverflowManagerDelegate *delegate;
+@property (strong, nonatomic) NSError *underlyingError;
+@property (strong, nonatomic) QuestionBuilder *questionBuilder;
+@property (strong, nonatomic) NSArray<Question *> *questionArray;
 @end
 
 
@@ -40,10 +68,20 @@
 - (void)setUp {
     [super setUp];
     self.manager = [StackOverflowManager new];
+    self.delegate = [MockStackOverflowManagerDelegate new];
+    self.questionBuilder = [FakeQuestionBuilder new];
+    self.manager.delegate = self.delegate;
+    self.manager.questionBuilder = self.questionBuilder;
+    self.underlyingError = [NSError errorWithDomain:StackOverflowManagerError code:StackOverflowManagerErrorQuestionsSearchCode userInfo:nil];
+    
+    self.questionArray = [NSArray arrayWithObject:[Question new]];
 }
 
 - (void)tearDown {
     [super tearDown];
+    self.underlyingError = nil;
+    self.delegate = nil;
+    self.manager = nil;
 }
 
 - (void)testNonConformingObjectCannotBeDelegate {
@@ -66,6 +104,51 @@
     [self.manager fetchQuestionsOnTopic:topic];
     XCTAssertTrue([communicator wasAskedToFetchQuestions], @"The communicator shoud need to fetch data");
 }
+
+
+- (void)testErrorReturnedToDelegateIsNotErrorNotifedByCommuniator {
+    [self.manager searchingForQuestionsFailedWithError:self.underlyingError];
+    XCTAssertFalse(self.underlyingError == [self.delegate fetchError], @"Error should be at the correct level of abstraction");
+}
+
+- (void)testErrorReturnedToDelegateDocumentsUnderlyingError {
+    [self.manager searchingForQuestionsFailedWithError:self.underlyingError];
+    XCTAssertEqual(self.underlyingError, [[[self.delegate fetchError] userInfo] objectForKey:NSUnderlyingErrorKey], @"The underlying error should be available to client code.");
+}
+
+- (void)testQuestionJSONIsPassedToQuestionBuilder {
+    [self tellDelegateAboutQuestionSearchError:nil];
+    XCTAssertEqual(self.manager.questionBuilder.JSON, @"Fake JSON", @"Downloaded JSON is sent to the builder");
+    self.manager.questionBuilder = nil;
+}
+
+- (void)tellDelegateAboutQuestionSearchError:(NSError *)error {
+    self.manager.questionBuilder.arrayToReturn = nil;
+    self.manager.questionBuilder.errroToSet = error;
+    NSString *const jsonString = @"Fake JSON";
+    [self.manager receivedQuestionJSON:jsonString];
+}
+
+- (void)testDelegateNotifiedOfErrorWhenQuestionBuilderFails {
+    [self tellDelegateAboutQuestionSearchError:self.underlyingError];
+    XCTAssertNotNil([[self.delegate fetchError] userInfo],
+                    @"The delegate should have found out about the error");
+    self.manager.questionBuilder = nil;
+}
+
+- (void)testDelegateNotToldAboutErrorWhenQuestionsReceived {
+    self.questionBuilder.arrayToReturn = self.questionArray;
+    [self.manager receivedQuestionJSON:@"Fake JSON"];
+    XCTAssertNil([self.delegate fetchError], @"No error should be received on success");
+}
+
+- (void)testEmptyArrayIsPassedToDelegate {
+    NSArray<Question *> *array = [NSArray array];
+    self.manager.questionBuilder.arrayToReturn = array;
+    [self.manager receivedQuestionJSON:@"Fake JSON"];
+    XCTAssertEqual(array, [self.delegate receivedQuestions], @"Returning an empty array isn't an ERROR");
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
